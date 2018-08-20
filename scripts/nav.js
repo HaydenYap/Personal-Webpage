@@ -1,19 +1,3 @@
-<head>
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.7/react-redux.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-</head>
-
-<div id="nav"></div>
-
-<script type="text/babel">
 const nav =[
   {
     name: "Hayden Yap",
@@ -196,7 +180,7 @@ class MainNavButton extends React.Component{
     const buttons = this.props.mainButtons.map(function(button){
       if (button.subCat == null){
         return (
-          <DirectButton classes="main-nav-button" key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
+          <DirectButton key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
         )
       } else {
         sub.push(
@@ -206,7 +190,7 @@ class MainNavButton extends React.Component{
           }
         )
         return (
-          <li className="main-nav-button nav-button" key={button.keyID}>
+          <li className="nav-button" key={button.keyID}>
             <div className="nav-name" id={button.keyID} onClick={this.handleDrop}>{button.name} <i className="fas fa-angle-down"></i></div>
           </li>
         )
@@ -283,4 +267,3 @@ $(document).ready(function(){
   console.log("Document ready!")
   }
 )
-</script>

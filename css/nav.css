@@ -63,21 +63,28 @@ ul{
   border: 0.25px solid #23292a;
 }
 
+.main-nav-button
+
 .nav-button{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .nav-sub-button{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+
+  color: inherit;
 }
+
 .nav-sub-name{
-  width: 150px;
+  display: inline-block;
+  align-items: center;
+  padding: 2.5px 10px;
 }
+
 .nav-window{
   display: flex;
   flex-direction: column;
@@ -93,14 +100,15 @@ a{
 }
 
 #dropdown{
-  display: flex;
-  flex-direction: row;
-  background-color:#23292a;
+  display: inline-flex;
   color: inherit;
-  align-items: center;
   padding-left: 150px;
 }
 
-#projects-content{
-  padding-left: 153.5px;
+.sub-buttons{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color:#23292a;
+  padding: 5px;
 }

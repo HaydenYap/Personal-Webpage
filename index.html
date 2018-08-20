@@ -5,15 +5,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.7/react-redux.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 
+<div id="nav"></div>
 <div id="root"></div>
 <div id="root2"></div>
 
-<script type="text/jsx">
+<script type="text/babel">
   class Root extends React.Component{
   constructor(props){
     super(props);
@@ -30,4 +31,10 @@
 }
 
 ReactDOM.render(<Root />, document.getElementById('root'))
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#nav").load("http://haydenyap.com");
+})
 </script>
