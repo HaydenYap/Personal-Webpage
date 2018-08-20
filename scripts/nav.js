@@ -180,7 +180,7 @@ class MainNavButton extends React.Component{
     const buttons = this.props.mainButtons.map(function(button){
       if (button.subCat == null){
         return (
-          <DirectButton key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
+          <DirectButton classes="main-nav-button" key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
         )
       } else {
         sub.push(
@@ -190,7 +190,7 @@ class MainNavButton extends React.Component{
           }
         )
         return (
-          <li className="nav-button" key={button.keyID}>
+          <li className="main-nav-button nav-button" key={button.keyID}>
             <div className="nav-name" id={button.keyID} onClick={this.handleDrop}>{button.name} <i className="fas fa-angle-down"></i></div>
           </li>
         )
