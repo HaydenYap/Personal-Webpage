@@ -108,6 +108,15 @@ const dropReducer = (state = [], action) =>{
       } else {
         newState[action.name] = true;
       }
+
+      if (newState["projects"] == false){
+        newState["web-apps"] = false;
+        newState["web-pages"] = false;
+      }else if (newState["web-apps"] == true && action.name =="web-apps"){
+        newState["web-pages"] = false;
+      }else if(newState["web-pages"] == true && action.name =="web-pages"){
+        newState["web-apps"] = false;
+      }
       return newState;
     default:
         return state;
@@ -142,6 +151,12 @@ class SubNavButton extends React.Component{
 
   render(){
     const buttons = this.props.subButtons.map(function(button){
+      let icon;
+      if (store.getState()[button.keyID]){
+        icon = "fas fa-angle-down";
+      } else {
+        icon = "fas fa-angle-right";
+      }
       if(button.subCat == null){
         return(
           <DirectButton key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
@@ -150,7 +165,7 @@ class SubNavButton extends React.Component{
         let sub = store.getState()[button.keyID] ? <SubNavButton subButtons={button.subCat} /> : null
         return (
           <li className="nav-sub-button" key={button.keyID}>
-            <div className="nav-sub-name" id={button.keyID} onClick={this.handleDrop}><a href={button.href}>{button.name} <i className="fas fa-angle-right"></i></a></div>
+            <div className="nav-sub-name" id={button.keyID} onClick={this.handleDrop}><a href={button.href}>{button.name} <i className={icon}></i></a></div>
             <ul>
               {sub}
             </ul>
@@ -178,6 +193,12 @@ class MainNavButton extends React.Component{
   render(){
     let sub = [];
     const buttons = this.props.mainButtons.map(function(button){
+      let icon;
+      if (store.getState()[button.keyID]){
+        icon = "fas fa-angle-down";
+      } else {
+        icon = "fas fa-angle-right";
+      }
       if (button.subCat == null){
         return (
           <DirectButton classes="main-nav-button" key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
@@ -191,7 +212,7 @@ class MainNavButton extends React.Component{
         )
         return (
           <li className="main-nav-button nav-button" key={button.keyID}>
-            <div className="nav-name" id={button.keyID} onClick={this.handleDrop}>{button.name} <i className="fas fa-angle-down"></i></div>
+            <div className="nav-name" id={button.keyID} onClick={this.handleDrop}>{button.name} <i className={icon}></i></div>
           </li>
         )
       }

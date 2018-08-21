@@ -12,6 +12,8 @@
 }
 
 #nav{
+  width: 100%;
+  position: fixed;
   display: flex;
   flex-direction: column;
 }
