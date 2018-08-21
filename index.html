@@ -12,13 +12,55 @@
 </head>
 
 <div id="nav"></div>
-<div id="index"></div>
+<div id="root"></div>
 
 <script type="text/babel">
 
-  const title="Hayden Yap"
-  const subTitle="Web Designer, Gamer and Tech Enthusiast"
-  
+  const webContent = {
+    name: {
+      id: "name",
+      content: "Hayden Yap"
+    },
+    descriptors: {
+      id: "descriptors",
+      content: "Web Designer, Tech Enthusiast, and Gamer"
+    },
+    about: {
+      id: "about",
+      content: "<a href=\"#\"> Hayden </a>"
+    }
+  }
+
+  class Text extends React.Component{
+    constructor(props){
+      super(props);
+    }
+
+    render(){
+      return(
+        <div id={this.props.payload.id} dangerouslySetInnerHTML={{__html: this.props.payload.content}}></div>
+      )
+    }
+  }
+
+  class Section extends React.Component{
+    constructor(props){
+      super(props);
+    }
+
+    render(){
+      const content = this.props.payload.map(function(load){
+        return (
+          <Text key={this.props.sectionName+"-"+load.id} payload={load}/>
+        )
+      },this)
+      return(
+        <div id={this.props.sectionName}>
+          {content}
+        </div>
+      )
+    }
+  }
 
   class Root extends React.Component{
   constructor(props){
@@ -29,13 +71,13 @@
   render(){
     return(
       <div>
-        Hello
+        <Section payload={[webContent.name,webContent.descriptors]} sectionName="banner"/>
       </div>
     )
   }
 }
 
-ReactDOM.render(<Root />, document.getElementById('index'))
+ReactDOM.render(<Root />, document.getElementById('root'))
 </script>
 
 <script type="text/babel" src="https://rawgit.com/HaydenYap/Personal-Webpage/master/scripts/nav.js"> </script>
