@@ -19,35 +19,35 @@ const nav =[
           {
             name: "Calculator",
             keyID: "calculator",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Apps/calculator/index.html",
+            href: "/projects/Web-Apps/calculator/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Drum Machine",
             keyID: "drum-machine",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Apps/Drum-machine/index.html",
+            href: "/projects/Web-Apps/Drum-machine/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Markdown Previewer",
             keyID: "markdown-previewer",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Apps/Markdown-Previewer/index.html",
+            href: "/projects/Web-Apps/Markdown-Previewer/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Pomodoro Clock",
             keyID: "pomodoro-clock",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Apps/Pomodoro-Clock/index.html",
+            href: "/projects/Web-Apps/Pomodoro-Clock/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Random Quote Machine",
             keyID: "random-quote-machine",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Apps/Random-Quote-Machine/index.html",
+            href: "/projects/Web-Apps/Random-Quote-Machine/index.html",
             target: "_self",
             subCat: null
           }
@@ -61,21 +61,21 @@ const nav =[
           {
             name: "Survey Page",
             keyID: "survey-page",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Pages/Survey+Form+Page/index.html",
+            href: "/projects/Web-Pages/Survey-Form-Page/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Technical Documentation Page",
             keyID: "technical-documentation-page",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Pages/Technical+Documentation+Page/index.html",
+            href: "/projects/Web-Pages/Technical-Documentation-Page/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Tribute Page",
             keyID: "tribute-page",
-            href: "https://s3.ca-central-1.amazonaws.com/haydenyap.com/projects/Web-Pages/Tribute+Page/index.html",
+            href: "/projects/Web-Pages/Tribute-Page/index.html",
             target: "_self",
             subCat: null
           }
@@ -149,9 +149,10 @@ class DirectButton extends React.Component{
   }
 
   render(){
+    const navName="nav-"+ this.props.buttonKeyID
     return(
       <li className="nav-button">
-        <div className="nav-name" id={this.props.buttonKeyID}><a href={this.props.buttonHref} target={this.props.buttonTarget}>{this.props.buttonName}</a></div>
+        <div className="nav-name" id={navName}><a href={this.props.buttonHref} target={this.props.buttonTarget}>{this.props.buttonName}</a></div>
       </li>
     )
   }
