@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+#quote-app{
+  background-color: pink;
+  color:color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+#quote-app button{
+  height: 4rem;
+}
+
+#quote-app #quote-box{
+  background-color: white;
+  max-width: 50em;
+  border-radius: 5px;
+}
+
+#quote-app #quote{
+  font-size: 20px;
+}
+
+#quote-app #content{
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+#quote-app #buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#quote-app .button{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: pink;
+}
+#quote-app .button:hover{
+  text-decoration: none;
+  opacity: 0.5;
+  color: white;
+}
+
+
+#quote-app #text{
+  padding: 4rem;
+  color: inherit;
+}
+
+#quote-app #author{
+  padding: 2rem;
+  text-align: right;
+  color:inherit;
+}
+
+#quote-app a{
+  text-decoration: none;
+}

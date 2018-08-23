@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#app{
+  display: flex;
+  height: 100%;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#drum-machine{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  width: 720px;
+  height: 360px;
+  margin: auto;
+}
+
+#panel{
+  display: flex;
+  flex-direction: column;
+  background-color:black;
+}
+
+#display{
+  display: flex;
+  width:100%;
+  height: 100%;
+  align-self: center;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+#display-box{
+  background-color: white;
+  border: 1px solid grey;
+  width: 130px;
+  height: 20px;
+}
+
+.panel-row{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.drum-pad{
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  margin: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+Button{
+  outline: none;
+}
+
+.drum-pad:hover{
+  opacity: 0.5;
+}
