@@ -13,6 +13,14 @@
   font-family: 'Cabin', sans-serif;
 }
 
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color: inherit;
+}
+
 #root{
   color: #2f3738
 }
@@ -24,7 +32,8 @@
   flex-direction: column;
   width: 100%;
   height: 50%;
-  background-color: #59d8e6;
+  background-image: url("../images/index.png");
+  background-position: center top;
 }
 
 #title{

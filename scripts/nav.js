@@ -16,13 +16,6 @@ const nav =[
         href: "#",
         subCat: [
           {
-            name: "Product Page",
-            keyID: "product-page",
-            href: "#",
-            target: "_self",
-            subCat: null
-          },
-          {
             name: "Survey Page",
             keyID: "survey-page",
             href: "#",

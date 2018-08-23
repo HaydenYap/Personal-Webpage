@@ -11,30 +11,30 @@
   padding: 0;
 }
 
-ul{
+#nav ul{
   list-style: none;
 }
 
-a{
+#nav a{
   color: inherit;
   text-decoration: none;
 }
 
 #nav{
-  width: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  z-index: 100;
 }
 
-#nav-bar{
+#nav #nav-bar{
   color: #eeeff7;
   font-family: 'Cabin', sans-serif;
   height: 100%;
 }
 
-#main-nav-content{
+#nav #main-nav-content{
   display: flex;
   flex-direction: row;
   font-size: 20px;
@@ -44,17 +44,17 @@ a{
   align-items: center;
 }
 
-.nav-name{
+#nav .nav-name{
   padding: 0px 20px;
 }
 
-#nav-drop{
+#nav #nav-drop{
   background: linear-gradient(#23292a 1%,#59d8e6 30%);
   width: 100%;
   height: 10px;
 }
 
-.nav-sub{
+#nav .nav-sub{
   display: flex;
   flex-direction: row;
   height: 60px;
@@ -63,42 +63,42 @@ a{
   min-width: 120px;
 }
 
-.nav-button{
+#nav .nav-button{
   display: flex;
   flex-direction: row;
   align-items: left;
   justify-content: left;
 }
 
-.nav-sub-button{
+#nav .nav-sub-button{
   display: inline-flex;
   flex-direction: column;
 
   color: inherit;
 }
 
-.nav-sub-name{
+#nav .nav-sub-name{
   display: inline-block;
   align-items: center;
   padding: 2.5px 20px;
 }
 
-.nav-window{
+#nav .nav-window{
   display: flex;
   flex-direction: column;
 }
 
-.nav-name:hover{
+#nav .nav-name:hover{
   opacity: 0.5;
 }
 
-#dropdown{
+#nav #dropdown{
   display: inline-flex;
   color: inherit;
   padding-left: 150px;
 }
 
-.sub-buttons{
+#nav .sub-buttons{
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -106,6 +106,6 @@ a{
   padding: 5px;
 }
 
-.sub-drop{
+#nav .sub-drop{
   padding: 0px 10px;
 }
