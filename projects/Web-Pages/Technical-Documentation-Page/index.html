@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.7/react-redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
+    <link rel="stylesheet" href="../../../css/nav.css">
+    <link rel= "stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  </head>
+
+    <div id=nav></div>
+    <body>
+      <div id="page-container">
+        <div id="navigation">
+          <nav id="navbar">
+            <header>JS documentation</header>
+            <ul>
+              <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+              <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+              <li><a class="nav-link" href="#Variables">Variables</a></li>
+              <li><a class="nav-link" href="#Declaring_Variables">Declaring Variables</a></li>
+              <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="documentation">
+          <main id="main-doc">
+
+            <section class="main-section" id="Introduction">
+              <header>Introduction</header>
+              <p>
+                This is just a normal small documentation page for JavaScript
+              </p>
+              <p>
+                PS: work in progresss so it does not have much yet
+              </p>
+            </section>
+
+            <section class="main-section" id="Hello_World">
+              <header>Hello World</header>
+              <p>
+                Here is an example of the famous "Hello World" program
+                written in JavaScript
+              </p>
+              <code>
+                function helloWorld(name){
+                  alert("Hello World by " + name);
+                }
+                helloWorld("World");
+              </code>
+              <p>
+                This will output the line "Hello World" along with some extra
+                stuff a more normal version would be:
+              </p>
+              </script>
+              <code>
+                function helloWorld(name){
+                  alert("Hello " + name);
+                }
+                helloWorld("World");
+              </code>
+            </section>
+
+            <section class="main-section" id="Variables">
+              <header>Variables</header>
+              <p>What are variables in Java Script?</p>
+              <p>Variable must start with a letter, underscore or dollar sign
+                followed by letters from A/a to Z/z or digits 0-9.
+                Pretty standard stuff.
+              </p>
+            </section>
+
+            <section class="main-section" id="Declaring_Variables">
+              <header>Declaring Variables</header>
+              <p>
+                there are three ways to declare a variable in JS.
+              </p>
+              <code>
+                var x = 42.
+              </code>
+              <p>
+                This can be used to declare local and global variables
+              </p>
+              <code>
+                x = 42.
+              </code>
+              <p>
+                always declares a global variable and generates a JS waring
+                (so don't use this)
+              </p>
+              <code>
+                let y=13.
+              </code>
+              <p>
+                can be used to declare a block scope local variable.
+              </p>
+            </section>
+
+            <section class="main-section" id="Data_Types">
+              <header >Data Types</header>
+                <p>there are 7 data types, an Object and 6 primitive
+                  data types
+                </p>
+                <ul>
+                  <li>Boolean - true and false</li>
+                  <li>null - special keyword for denoting a "null" value, null is not the same as NULL,Null,... etc</li>
+                  <li>undefined - top-level property whose value is undefined</li>
+                  <li>Number - any REAL number</li>
+                  <li>string - a sequence of characters</li>
+                  <li>Symbol -  a data type who instances are unique and immutable</li>
+                </ul>
+            </section>
+
+          </main>
+        </div>
+      </div>
+    </body>
+    <script type="text/babel" src="https://s3.ca-central-1.amazonaws.com/haydenyap.com/scripts/nav.js"> </script>
+</html>

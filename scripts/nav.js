@@ -2,7 +2,8 @@ const nav =[
   {
     name: "Hayden Yap",
     keyID: "hayden-yap",
-    href: "#",
+    href: "http://haydenyap.com/",
+    target:"_self",
     subCat: null
   },
   {
@@ -11,34 +12,6 @@ const nav =[
     href: "#",
     subCat: [
       {
-        name: "Web Pages",
-        keyID: "web-pages",
-        href: "#",
-        subCat: [
-          {
-            name: "Survey Page",
-            keyID: "survey-page",
-            href: "#",
-            target: "_self",
-            subCat: null
-          },
-          {
-            name: "Technical Documentation Page",
-            keyID: "technical-documentation-page",
-            href: "#",
-            target: "_self",
-            subCat: null
-          },
-          {
-            name: "Tribute Page",
-            keyID: "tribute-page",
-            href: "#",
-            target: "_self",
-            subCat: null
-          }
-        ]
-      },
-      {
         name: "Web Apps",
         keyID: "web-apps",
         href: "#",
@@ -46,35 +19,63 @@ const nav =[
           {
             name: "Calculator",
             keyID: "calculator",
-            href: "#",
+            href: "/projects/Web-Apps/calculator/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Drum Machine",
             keyID: "drum-machine",
-            href: "#",
+            href: "/projects/Web-Apps/Drum-machine/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Markdown Previewer",
             keyID: "markdown-previewer",
-            href: "#",
+            href: "/projects/Web-Apps/Markdown-Previewer/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Pomodoro Clock",
             keyID: "pomodoro-clock",
-            href: "#",
+            href: "/projects/Web-Apps/Pomodoro-Clock/index.html",
             target: "_self",
             subCat: null
           },
           {
             name: "Random Quote Machine",
             keyID: "random-quote-machine",
-            href: "#",
+            href: "/projects/Web-Apps/Random-Quote-Machine/index.html",
+            target: "_self",
+            subCat: null
+          }
+        ]
+      },
+      {
+        name: "Web Pages",
+        keyID: "web-pages",
+        href: "#",
+        subCat: [
+          {
+            name: "Survey Page",
+            keyID: "survey-page",
+            href: "/projects/Web-Pages/Survey-Form-Page/index.html",
+            target: "_self",
+            subCat: null
+          },
+          {
+            name: "Technical Documentation Page",
+            keyID: "technical-documentation-page",
+            href: "/projects/Web-Pages/Technical-Documentation-Page/index.html",
+            target: "_self",
+            subCat: null
+          },
+          {
+            name: "Tribute Page",
+            keyID: "tribute-page",
+            href: "/projects/Web-Pages/Tribute-Page/index.html",
             target: "_self",
             subCat: null
           }
@@ -148,9 +149,10 @@ class DirectButton extends React.Component{
   }
 
   render(){
+    const navName="nav-"+ this.props.buttonKeyID
     return(
       <li className="nav-button">
-        <div className="nav-name" id={this.props.buttonKeyID}><a href={this.props.buttonHref} target={this.props.buttonTarget}>{this.props.buttonName}</a></div>
+        <div className="nav-name" id={navName}><a href={this.props.buttonHref} target={this.props.buttonTarget}>{this.props.buttonName}</a></div>
       </li>
     )
   }
