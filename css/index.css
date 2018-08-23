@@ -1,14 +1,46 @@
+/*
+  #eeeff7   - white
+  #d5fbff   - sky blue
+  #9fbcbf   - light grey
+  #647678   - grey
+  #2f3738   - dark grey
+  #59d8e6   - teal
+*/
+
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Cabin', sans-serif;
 }
 
 #root{
-  padding-top: 60px;
+  color: #2f3738
 }
 
 #banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  height: 60%;
+  height: 50%;
+  background-color: #59d8e6;
+}
+
+#title{
+  font-size: 80px;
+}
+
+#descriptors{
+  font-size: 40px;
+}
+
+#about{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 50%;
+  padding: 0% 20%;
   background-color: #d5fbff;
 }

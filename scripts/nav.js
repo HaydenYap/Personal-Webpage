@@ -11,43 +11,6 @@ const nav =[
     href: "#",
     subCat: [
       {
-        name: "Web Apps",
-        keyID: "web-apps",
-        href: "#",
-        subCat: [
-          {
-            name: "Calculator",
-            keyID: "calculator",
-            href: "#",
-            subCat: null
-          },
-          {
-            name: "Drum Machine",
-            keyID: "drum-machine",
-            href: "#",
-            subCat: null
-          },
-          {
-            name: "Markdown Previewer",
-            keyID: "markdown-previewer",
-            href: "#",
-            subCat: null
-          },
-          {
-            name: "Pomodoro Clock",
-            keyID: "pomodoro-clock",
-            href: "#",
-            subCat: null
-          },
-          {
-            name: "Random Quote Machine",
-            keyID: "random-quote-machine",
-            href: "#",
-            subCat: null
-          }
-        ]
-      },
-      {
         name: "Web Pages",
         keyID: "web-pages",
         href: "#",
@@ -56,27 +19,80 @@ const nav =[
             name: "Product Page",
             keyID: "product-page",
             href: "#",
+            target: "_self",
             subCat: null
           },
           {
             name: "Survey Page",
             keyID: "survey-page",
             href: "#",
+            target: "_self",
             subCat: null
           },
           {
             name: "Technical Documentation Page",
             keyID: "technical-documentation-page",
             href: "#",
+            target: "_self",
             subCat: null
           },
           {
             name: "Tribute Page",
             keyID: "tribute-page",
             href: "#",
+            target: "_self",
             subCat: null
           }
         ]
+      },
+      {
+        name: "Web Apps",
+        keyID: "web-apps",
+        href: "#",
+        subCat: [
+          {
+            name: "Calculator",
+            keyID: "calculator",
+            href: "#",
+            target: "_self",
+            subCat: null
+          },
+          {
+            name: "Drum Machine",
+            keyID: "drum-machine",
+            href: "#",
+            target: "_self",
+            subCat: null
+          },
+          {
+            name: "Markdown Previewer",
+            keyID: "markdown-previewer",
+            href: "#",
+            target: "_self",
+            subCat: null
+          },
+          {
+            name: "Pomodoro Clock",
+            keyID: "pomodoro-clock",
+            href: "#",
+            target: "_self",
+            subCat: null
+          },
+          {
+            name: "Random Quote Machine",
+            keyID: "random-quote-machine",
+            href: "#",
+            target: "_self",
+            subCat: null
+          }
+        ]
+      },
+      {
+        name:"Information on all Projects",
+        keyID: "projects-info",
+        href: "#",
+        target: "_self",
+        subCat: null
       }
     ]
   },
@@ -84,6 +100,14 @@ const nav =[
     name: "Resume",
     keyID: "resume",
     href: "#",
+    target: "_blank",
+    subCat: null
+  },
+  {
+    name: "GitHub",
+    keyID: "github",
+    href: "https://github.com/HaydenYap",
+    target: "_blank",
     subCat: null
   }
 ]
@@ -133,7 +157,7 @@ class DirectButton extends React.Component{
   render(){
     return(
       <li className="nav-button">
-        <div className="nav-name" id={this.props.buttonKeyID}><a href={this.props.buttonHref}>{this.props.buttonName}</a></div>
+        <div className="nav-name" id={this.props.buttonKeyID}><a href={this.props.buttonHref} target={this.props.buttonTarget}>{this.props.buttonName}</a></div>
       </li>
     )
   }
@@ -159,14 +183,14 @@ class SubNavButton extends React.Component{
       }
       if(button.subCat == null){
         return(
-          <DirectButton key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
+          <DirectButton key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href} buttonTarget={button.target}/>
         )
       } else {
         let sub = store.getState()[button.keyID] ? <SubNavButton subButtons={button.subCat} /> : null
         return (
           <li className="nav-sub-button" key={button.keyID}>
             <div className="nav-sub-name" id={button.keyID} onClick={this.handleDrop}><a href={button.href}>{button.name} <i className={icon}></i></a></div>
-            <ul>
+            <ul className="sub-drop">
               {sub}
             </ul>
           </li>
@@ -201,7 +225,7 @@ class MainNavButton extends React.Component{
       }
       if (button.subCat == null){
         return (
-          <DirectButton classes="main-nav-button" key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href}/>
+          <DirectButton classes="main-nav-button" key={button.keyID} buttonKeyID={button.keyID} buttonName={button.name} buttonHref={button.href} buttonTarget={button.target}/>
         )
       } else {
         sub.push(

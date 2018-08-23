@@ -1,6 +1,6 @@
 /*
   #eeeff7   - white
-     - sky blue
+  #d5fbff   - sky blue
   #9fbcbf   - light grey
   #647678   - grey
   #2f3738   - dark grey
@@ -11,11 +11,21 @@
   padding: 0;
 }
 
+ul{
+  list-style: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
 #nav{
   width: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 #nav-bar{
@@ -27,10 +37,10 @@
 #main-nav-content{
   display: flex;
   flex-direction: row;
-
-  background-color: #2f3738;
-  height: 60px;
   font-size: 20px;
+  background-color: #2f3738;
+  min-height: 60px;
+  height: 5%;
   align-items: center;
 }
 
@@ -43,10 +53,6 @@
   width: 100%;
   height: 10px;
 }
-ul{
-  list-style: none;
-}
-
 
 .nav-sub{
   display: flex;
@@ -56,16 +62,6 @@ ul{
   justify-content: center;
   min-width: 120px;
 }
-
-.divider{
-  height: 80%;
-  width: 3px;
-  background: linear-gradient(to right,#23292a,#3a4445,#23292a);
-  border-radius: 5px;
-  border: 0.25px solid #23292a;
-}
-
-.main-nav-button
 
 .nav-button{
   display: flex;
@@ -84,17 +80,12 @@ ul{
 .nav-sub-name{
   display: inline-block;
   align-items: center;
-  padding: 2.5px 10px;
+  padding: 2.5px 20px;
 }
 
 .nav-window{
   display: flex;
   flex-direction: column;
-}
-
-a{
-  color: inherit;
-  text-decoration: none;
 }
 
 .nav-name:hover{
@@ -113,4 +104,8 @@ a{
   text-align: left;
   background-color:#23292a;
   padding: 5px;
+}
+
+.sub-drop{
+  padding: 0px 10px;
 }
