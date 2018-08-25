@@ -193,7 +193,7 @@ const digits = [
 
     render(){
       const row = (rowContent) =>{
-        var elementClass = "padCasing col-xs-4"
+        var elementClass = "padCasing col"
         return rowContent.map(function(digit){
           return(
             <button className="padButton" id={digit.value} key={digit.value} onClick={this.handleNumClick} value={digit.symbol}>{digit.symbol}</button>

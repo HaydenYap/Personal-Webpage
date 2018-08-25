@@ -1,7 +1,7 @@
 body{
   padding:0;
   margin:0;
-  background-color: #4e6182;
+  background-color: #9fbcbf;
 }
 #app,#page{
   height: 100%;
@@ -12,7 +12,7 @@ body{
 }
 
 #toolbar{
-  background-color: #3b4556;
+  background-color: #2f3738;
   width: 100%;
   height: 10%;
 }
@@ -52,7 +52,7 @@ body{
   min-height: 21px;
   font-size: 20px;
   border-bottom: 1px solid black;
-  background-color: grey;
+  background-color: #647678;
 }
 
 .fullscreenWindow{

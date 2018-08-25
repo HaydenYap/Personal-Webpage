@@ -35,7 +35,7 @@ const webContent = {
       content:
       `
       Some people love movies and some love TV series. Everyone has their favourite form of entertainment which to them,
-      trumps all others.For me, It is games. I am asked quite often why I prefer Games over movies or TV and my answer is always
+      trumps all others. For me, It is games. I am asked quite often why I prefer Games over movies or TV and my answer is always
       the same: <em>"I can spend $15 on a 2 hour movie or I spend $80 on a game that I can easily spend 100+ hours playing"</em>.
       `
     }
@@ -87,7 +87,7 @@ render(){
       <Section payload={webContent.about} sectionName="about" />
     </div>
   )
-}
+  }
 }
 
 $(document).ready(function(){

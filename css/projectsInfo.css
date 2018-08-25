@@ -1,5 +1,29 @@
 #root{
-  padding-top: 60px;
   font-family: 'Cabin', sans-serif;
   color
+}
+
+.teal{
+  background-color: #59d8e6;
+}
+
+.sky-blue{
+  background-color: #d5fbff;
+}
+
+.project-image{
+  width: 250px;
+  height: 250px;
+  margin: 25px;
+}
+
+@media (max-width: 576px) {
+  .media{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-text{
+    padding: 15px;
+  }
 }

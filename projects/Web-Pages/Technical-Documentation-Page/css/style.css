@@ -9,11 +9,11 @@ html, body{
   flex-direction: row;
   padding-top: 60px;
 }
-#navigation header{
+#navi header{
   padding: 5% 0;
 }
 
-#navigation{
+#navi{
   position: fixed;
   margin-left: 0;
   background-color: #f2f2f2;
@@ -71,7 +71,7 @@ code{
 }
 
 @media only screen and (max-width: 1020px){
-  #navigation{
+  #navi{
     width: 100%;
     height: 90px;
   }

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 #root{
-  background-color: pink;
+  background-color: #647678;
   color:color;
   display: flex;
   flex-direction: column;
@@ -11,33 +11,33 @@
   height: 100%;
   align-items: center;
 }
-#quote-app button{
+button{
   height: 4rem;
 }
 
-#quote-app #quote-box{
+#quote-box{
   background-color: white;
   max-width: 50em;
   border-radius: 5px;
 }
 
-#quote-app #quote{
+#quote{
   font-size: 20px;
 }
 
-#quote-app #content{
+#content{
   display: flex;
   flex-direction: column;
   padding: 4rem;
 }
 
-#quote-app #buttons{
+#buttons{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#quote-app .button{
+.button{
   height: 40px;
   display: flex;
   align-items: center;
@@ -47,24 +47,24 @@
   border-radius: 5px;
   color: pink;
 }
-#quote-app .button:hover{
+.button:hover{
   text-decoration: none;
   opacity: 0.5;
   color: white;
 }
 
 
-#quote-app #text{
+#text{
   padding: 4rem;
   color: inherit;
 }
 
-#quote-app #author{
+#author{
   padding: 2rem;
   text-align: right;
   color:inherit;
 }
 
-#quote-app a{
+a{
   text-decoration: none;
 }

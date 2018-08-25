@@ -14,7 +14,7 @@ const nav =[
       {
         name: "Web Apps",
         keyID: "web-apps",
-        href: "#",
+        href: "/projectsInfo.html",
         subCat: null
       },
       {
@@ -50,7 +50,7 @@ const nav =[
   {
     name: "Resume",
     keyID: "resume",
-    href: "images/Resume.pdf",
+    href: "/images/Resume.pdf",
     target: "_blank",
     subCat: null
   },
@@ -139,11 +139,9 @@ $(document).ready(function(){
     e.stopPropagation();
   });
 });
-
 $(window).resize(function(){
   topPadding()
 })
-
 const topPadding = () =>{
   var currentHeight = document.getElementById('navigation').clientHeight
   $('#root').css("padding-top",currentHeight + "px")

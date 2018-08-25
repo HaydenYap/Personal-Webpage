@@ -26,7 +26,7 @@
 const projects = [
   {
     type: "Web Applications",
-    key: "Web Aplications",
+    key: "Web-Aplications",
     content:[
       {
         key:  "calculator",
@@ -40,7 +40,8 @@ const projects = [
           calculator (value in the display) is managed throough the Redux Store. The application
           is comparable to a standard calculator.
           `,
-          href: "https://github.com/HaydenYap/calculator"
+          href: "https://github.com/HaydenYap/calculator",
+          link: "/projects/Web-Apps/calculator/index.html"
         }
       },
       {
@@ -55,7 +56,8 @@ const projects = [
           on specific buttons or keystrokes of the label on each button. A small box on the right changes to display
           the name of the audio file on playback.
           `,
-          href:"https://github.com/HaydenYap/Drum-machine"
+          href: "https://github.com/HaydenYap/Drum-machine",
+          link: "/projects/Web-Apps/Drum-machine/index.html"
         }
       },
       {
@@ -69,7 +71,8 @@ const projects = [
           Markdown Previewer: Displays a real time preview of the parsed markdown content using the
           Markedjs on <b><a href="https://github.com/markedjs/marked">GitHub</a></b>.
           `,
-          href:"https://github.com/HaydenYap/Markdown-Previewer"
+          href: "https://github.com/HaydenYap/Markdown-Previewer",
+          link: "/projects/Web-Apps/Markdown-Previewer/index.html"
         }
       },
       {
@@ -84,7 +87,8 @@ const projects = [
           the secondary interval(break) is then started. This process repeats indefinitely. The state of this application
           is handled through Redux which manages which interval to use and what value remains on the timer.
           `,
-          href:"https://github.com/HaydenYap/Pomodoro-Clock"
+          href: "https://github.com/HaydenYap/Pomodoro-Clock",
+          link: "/projects/Web-Apps/Pomodoro-Clock/index.html"
         }
       },
       {
@@ -99,7 +103,8 @@ const projects = [
           The quote is selected from a finite array of quotes. With each page load and new quote, the color scheme
           of webpage alters using jQuery and BootStrap.
           `,
-          href:`https://github.com/HaydenYap/Random-Quote-Machine`
+          href: `https://github.com/HaydenYap/Random-Quote-Machine`,
+          link: "/projects/Web-Apps/Random-Quote-Machine/index.html"
         }
       }
     ]
@@ -114,7 +119,7 @@ class ProjectBox extends React.Component{
   render(){
     return(
       <div className="media">
-        <img src="images/placeholder.png" className="align-self-center mr-3"/>
+        <img src="images/placeholder.png" className="align-self-center mr-3 project-image"/>
         <div className="media-body align-self-center project-text">
           <div className="project-name">
             {this.props.box.name}
@@ -127,6 +132,9 @@ class ProjectBox extends React.Component{
           </div>
           <div className="project-href">
             <a href={this.props.box.href}>Github</a>
+          </div>
+          <div className="project-link">
+            <a href={this.props.box.link}>Web Page</a>
           </div>
         </div>
       </div>
@@ -141,12 +149,19 @@ class ProjectSection extends React.Component{
 
   render(){
     const projectBoxes = this.props.projects.map(function(box){
+      var index = projects.findIndex(x => x.key==this.props.section)
+      let color;
+      if (projects[index].content.findIndex(x => x.key==box.key) %2 == 0){
+        color = "teal";
+      } else {
+        color = "sky-blue";
+      }
         return(
-          <div id={box.key} key={box.key}>
+          <div id={box.key} key={box.key} className={color}>
             <ProjectBox box={box.content} />
           </div>
         )
-      }
+      },this
     )
     return(
       <div>
@@ -165,7 +180,7 @@ class Root extends React.Component{
     const projectSections = projects.map(function(section){
         return(
           <div id={section.key} key={section.key}>
-            <ProjectSection projects={section.content} />
+            <ProjectSection projects={section.content} section={section.key}/>
           </div>
         )
       }
@@ -181,4 +196,5 @@ class Root extends React.Component{
 ReactDOM.render(<Root />, document.getElementById('root'))
 
 </script>
+
 <script type="text/babel" src="https://s3.ca-central-1.amazonaws.com/haydenyap.com/scripts/nav.js"></script>
