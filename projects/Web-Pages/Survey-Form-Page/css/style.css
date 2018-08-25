@@ -1,51 +1,51 @@
-
-
+*{
+  margin: 0;
+  padding: 0;
+}
 
 html, body{
   font-family: "Motiva Sans", Sans-serif;
+  background-color: #d5fbff;
+  color: #647678;
+}
 
-  margin: 0;
-  padding: 0;
-  background-color: #42bff4;
+#root{
+  padding-top: 56px;
 }
 #preamble{
-  padding-top: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-#form-container{
-  background-color: white;
-  border-radius: 10%;
-  margin: 30px 15%;
-  height: 100
-}
-
-#form-content{
-  padding:5% 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .row{
-  font-size: 16px;
-  margin: 30px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#learn-table li{
-  list-style-type: none;
-}
-
 #submit-button{
-  text-align: center;
+  text-align: right;
 }
 
-.right-row input{
-  width: 160px;
+#form-container{
+  background-color: #59d8e6;
+  padding: 20px;
+  border-radius: 10px;
+}
+.form-table li{
+  list-style: none;
+}
+
+
+
+@media (max-width: 576px) {
+  #root{
+    padding-top: 216px;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
 }

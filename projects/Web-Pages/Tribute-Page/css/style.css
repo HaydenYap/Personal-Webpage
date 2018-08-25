@@ -1,4 +1,6 @@
-
+#root{
+  padding-top: 56px;
+}
 
 #main{
   text-align: center;
@@ -8,7 +10,7 @@
   padding-top: 70px;
   border: 0px solid;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: #d5fbff;
 }
 #main ul{
   max-width:550px;
@@ -28,7 +30,7 @@
 }
 
 #heading{
-  background-color: #eee;
+  background-color: #d5fbff;
   margin: 30px auto;
 }
 
@@ -40,11 +42,17 @@
 
 .rounded-image{
   border-radius: 10%;
-  border-color: #eee;
+  border-color: #647678;
   border-style: solid;
 }
 
 .game-image{
   min-width: 264px;
   margin: 0 10px 0 10px;
+}
+
+@media (max-width: 576px) {
+  #root{
+    padding-top: 216px;
+  }
 }

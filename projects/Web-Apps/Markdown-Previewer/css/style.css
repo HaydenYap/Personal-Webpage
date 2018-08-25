@@ -1,14 +1,15 @@
+#root, #page{
+  height: 100%;
+}
+
+#root{
+  padding-top:56px;
+}
+
 body{
   padding:0;
   margin:0;
   background-color: #9fbcbf;
-}
-#app,#page{
-  height: 100%;
-}
-
-#app{
-  padding-top: 60px;
 }
 
 #toolbar{
@@ -21,7 +22,8 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 90%
+  align-items: center;
+  height: 100%;
 }
 
 #editor{
@@ -35,7 +37,6 @@ body{
 }
 
 .window{
-  margin-top:5%;
   width: 40%;
   height: 80%;
   border: 1px solid black;
@@ -48,20 +49,23 @@ body{
 }
 
 .titlebar{
-  height: 5%;
   min-height: 21px;
   font-size: 20px;
   border-bottom: 1px solid black;
   background-color: #647678;
 }
 
+.container{
+  padding: 0;
+}
+
 .fullscreenWindow{
-  margin-top:5%;
   width: 80%;
   height: 80%;
   border: 1px solid black;
   border-bottom:2px solid black;
 }
+
 #toolbar{
   display: flex;
   align-items: flex-start;
@@ -80,4 +84,24 @@ button:focus{
 }
 button:hover{
   opacity: 0.55;
+}
+
+@media (max-width: 1400px) {
+ #content{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 100%;
+ }
+
+ .window{
+   height: 40%;
+   width: 80%;
+ }
+}
+
+@media (max-width: 576px) {
+  #root{
+    padding-top: 216px;
+  }
 }

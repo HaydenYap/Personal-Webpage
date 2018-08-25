@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   background-color:#647678;
+  padding-top:56px;
 }
 
 #drum-machine{
@@ -65,4 +66,10 @@ Button{
 
 .drum-pad:hover{
   opacity: 0.5;
+}
+
+@media (max-width: 576px) {
+  #root{
+    padding-top: 216px;
+  }
 }

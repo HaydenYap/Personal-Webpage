@@ -12,7 +12,7 @@ const nav =[
     href: "#",
     subCat: [
       {
-        name: "Web Apps",
+        name: "Website and Web Applications Info Page",
         keyID: "web-apps",
         href: "/projectsInfo.html",
         subCat: null
@@ -64,7 +64,7 @@ const nav =[
   {
     name: "linkedIn",
     keyID: "linkedIn",
-    href: "https://www.linkedin.com/in/hayden-yap-51715bba/",
+    href: "https://www.linkedin.com/in/hayden-yap/",
     target:"_blank",
     subCat: null
   }
@@ -132,19 +132,22 @@ class Nav extends React.Component{
   }
 }
 
+
 $(document).ready(function(){
-  topPadding()
   $('.dropdown-sub a.sub-menu').on("click", function(e){
     $(this).next('ul').toggle();
     e.stopPropagation();
   });
 });
+// code may be useful later
+/*
 $(window).resize(function(){
   topPadding()
 })
 const topPadding = () =>{
   var currentHeight = document.getElementById('navigation').clientHeight
+  console.log(currentHeight);
   $('#root').css("padding-top",currentHeight + "px")
-}
+}*/
 
 ReactDOM.render(<Nav />, document.getElementById("nav"))

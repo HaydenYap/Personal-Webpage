@@ -56,12 +56,12 @@ class App extends React.Component {
               <button id="expandPreview" onClick={this.handleExpand} value={"Expand Preview"}>Expand Preview</button>
             </div>
             <div id="content">
-              <div id="editWindow" className="window">
-                <div className="titlebar">Editor</div>
-                <textarea id="editor" className="textBox" onChange={this.handleEdit} defaultValue={this.state.input}></textarea>
+              <div id="editWindow" className="window container">
+                <div className="titlebar container">Editor</div>
+                <textarea id="editor" className="textBox container" onChange={this.handleEdit} defaultValue={this.state.input}></textarea>
               </div>
-              <div id="markdownWindow" className="window">
-                <div className="titlebar">Markdown Preview</div>
+              <div id="markdownWindow" className="window container">
+                <div className="titlebar container">Markdown Preview</div>
                 <Preview input={this.state.input}/>
               </div>
             </div>

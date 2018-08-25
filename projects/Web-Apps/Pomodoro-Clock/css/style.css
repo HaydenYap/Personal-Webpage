@@ -8,6 +8,10 @@ body{
   color:#ffffff;
 }
 
+#root{
+  padding-top: 56px;
+}
+
 #counters{
   display: flex;
   flex-direction: row;
@@ -69,4 +73,10 @@ body{
 #app{
   background-color: #ffffff;
   border-radius: 80px;
+}
+
+@media (max-width: 576px) {
+  #root{
+    padding-top: 216px;
+  }
 }

@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   background-color: #647678;
+  padding-top: 56px;
 }
 #calculator{
   display: flex;
@@ -54,4 +55,10 @@
   background-color: #647678;
   border: 1px solid #2f3738;
   margin: 2px;
+}
+
+@media (max-width: 576px) {
+  #root{
+    padding-top: 216px;
+  }
 }
