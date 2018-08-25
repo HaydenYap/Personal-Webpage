@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
-#quote-app{
+#root{
   background-color: pink;
   color:color;
   display: flex;

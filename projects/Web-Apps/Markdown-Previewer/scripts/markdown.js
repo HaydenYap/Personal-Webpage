@@ -93,5 +93,5 @@ const Preview =(props) =>{
 
 ReactDOM.render(
     <App />,
-    document.getElementById('app')
+    document.getElementById('root')
 );

@@ -6,10 +6,12 @@
   #2f3738   - dark grey
   #59d8e6   - teal
 */
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
 
 *{
-  padding: 0;
-  margin: 0;
   font-family: 'Cabin', sans-serif;
 }
 
@@ -22,16 +24,15 @@ a:visited{
 }
 
 #root{
-  color: #2f3738
+  color: #2f3738;
+  height:100%
 }
 
 #banner{
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: 100%;
-  height: 50%;
+  text-align: center;
+  justify-content: center;
   background-image: url("../images/index.png");
   background-position: center top;
 }
@@ -45,11 +46,13 @@ a:visited{
 }
 
 #about{
-  font-size: 20px;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
-  height: 50%;
-  padding: 0% 20%;
+  text-align: center;
+  justify-content: space-around;
   background-color: #d5fbff;
+}
+
+.about-text{
+  padding: 10px;
 }

@@ -48,9 +48,8 @@ class Text extends React.Component{
   }
 
   render(){
-
     return(
-      <div id={this.props.payload.id} className={this.props.section+"-text" + " container"} dangerouslySetInnerHTML={{__html: this.props.payload.content}}></div>
+      <div id={this.props.payload.id} dangerouslySetInnerHTML={{__html: this.props.payload.content}}></div>
     )
   }
 }
@@ -63,7 +62,7 @@ class Section extends React.Component{
   render(){
     const content = this.props.payload.map(function(load){
       return (
-        <Text key={this.props.sectionName+"-"+load.id} section={this.props.sectionName} payload={load}/>
+        <Text key={this.props.sectionName+"-"+load.id} payload={load}/>
       )
     },this)
     return(
@@ -82,18 +81,12 @@ constructor(props){
 
 render(){
   return(
-    <div id="rootContent" className="container-fluid">
+    <div>
       <Section payload={webContent.banner} sectionName="banner"/>
       <Section payload={webContent.about} sectionName="about" />
     </div>
   )
 }
 }
-
-$(document).ready(function(){
-  for (var key in webContent){
-    $("#" + key).css("min-height","50%");
-  }
-})
 
 ReactDOM.render(<Root />, document.getElementById('root'))
