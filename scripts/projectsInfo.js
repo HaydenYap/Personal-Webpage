@@ -129,7 +129,7 @@ class ProjectBox extends React.Component{
           </div>
           <div className="project-info">
             <b>Information</b>:
-            <div>{this.props.box.info}</div>
+            <div dangerouslySetInnerHTML={{__html: this.props.box.info}} />
           </div>
           <div className="project-href">
              <b><a href={this.props.box.href}>Github</a> Link</b>
